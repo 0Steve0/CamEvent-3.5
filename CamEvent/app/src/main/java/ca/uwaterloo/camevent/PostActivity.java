@@ -65,11 +65,11 @@ public class PostActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_post);
 
         mDatabase = getInstance().getReference();
-        capacity = (EditText) findViewById(R.id.editTextCapacity);
-        mTitleField = (EditText) findViewById(R.id.field_title);
-        mDesField = (EditText) findViewById(R.id.editTextDescription);
-        dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
-        mSubmitButton =(Button) findViewById(R.id.submit_post);
+
+        mTitleField = (EditText) findViewById(R.id.title);
+        mDesField = (EditText) findViewById(R.id.description);
+        dateFormatter = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        mSubmitButton =(Button) findViewById(R.id.post);
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,21 +87,8 @@ public class PostActivity extends BaseActivity implements View.OnClickListener {
         fromDateEtxt.setInputType(InputType.TYPE_NULL);
         fromDateEtxt.setFocusable(false);
         //fromDateEtxt.requestFocus();
-
-        toDateEtxt = (EditText) findViewById(R.id.etxt_todate);
-        toDateEtxt.setInputType(InputType.TYPE_NULL);
-        toDateEtxt.setFocusable(false);
-
-        fromTimeEtxt = (EditText) findViewById(R.id.etxt_fromtime);
-        fromTimeEtxt.setInputType(InputType.TYPE_NULL);
-        fromTimeEtxt.setFocusable(false);
-
-        toTimeEtxt = (EditText) findViewById(R.id.etxt_totime);
-        toTimeEtxt.setInputType(InputType.TYPE_NULL);
-        toTimeEtxt.setFocusable(false);
-
         spinnerBuilding = (Spinner) findViewById(R.id.spinnerBuilding);
-        spinnerType = (Spinner) findViewById(R.id.spinnerType);
+
     }
 
     private void showSpinner(){
@@ -113,24 +100,11 @@ public class PostActivity extends BaseActivity implements View.OnClickListener {
         // Apply the adapter to the spinner
         spinnerBuilding.setAdapter(adapterBuilding);
 
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapterType = ArrayAdapter.createFromResource(this,
-                R.array.spinnerType, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapterType.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        spinnerType.setAdapter(adapterType);
     }
 
     private void setDateTimeField() {
         fromDateEtxt.setOnClickListener(this);
-        toDateEtxt.setOnClickListener(this);
-        fromTimeEtxt.setOnClickListener(this);
-        toTimeEtxt.setOnClickListener(this);
-
         Calendar newCalendar = Calendar.getInstance();
-        mHour = newCalendar.get(Calendar.HOUR_OF_DAY);
-        mMinute = newCalendar.get(Calendar.MINUTE);
 
         fromDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
 
@@ -142,29 +116,6 @@ public class PostActivity extends BaseActivity implements View.OnClickListener {
 
         }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
         fromDatePickerDialog.getDatePicker().setMinDate(new Date().getTime());
-
-        toDatePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-                toDateEtxt.setText(dateFormatter.format(newDate.getTime()));
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-        toDatePickerDialog.getDatePicker().setMinDate(new Date().getTime());
-
-        fromTimePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
-            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                fromTimeEtxt.setText(hourOfDay + ":" + minute);
-            }
-        },mHour,mMinute,true);
-
-        toTimePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
-            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                toTimeEtxt.setText(hourOfDay + ":" + minute);
-            }
-        },mHour,mMinute,true);
     }
 
     private void submitPost() {
@@ -258,15 +209,7 @@ public class PostActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        if(view == fromDateEtxt) {
-            fromDatePickerDialog.show();
-        } else if(view == fromTimeEtxt){
-            fromTimePickerDialog.show();
-        } else if(view == toDateEtxt) {
-            toDatePickerDialog.show();
-        } else if(view == toTimeEtxt){
-            toTimePickerDialog.show();
-        }
+        fromDatePickerDialog.show();
     }
 
     public void post(View view){

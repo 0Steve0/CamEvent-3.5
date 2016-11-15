@@ -52,29 +52,14 @@ public class DisplayActivity extends AppCompatActivity {
         strLink= eventinfo.getEventLink();
         //set title and description!
         TextView title = (TextView) findViewById(R.id.title);
-        TextView link = (TextView) findViewById(R.id.des);
+        TextView link = (TextView) findViewById(R.id.link);
+        TextView location = (TextView) findViewById(R.id.location);
+        TextView time = (TextView) findViewById(R.id.time);
         title.setText(strTitle);
         link.setText(strLink);
-        Linkify.addLinks(link, Linkify.WEB_URLS);
-        //des.setText(Html.fromHtml(strDes));
-        //set date and location
-        ListView list = (ListView) findViewById(R.id.MyListView);
-        ArrayList<HashMap<String, String>> mylist = new ArrayList<HashMap<String, String>>();
-        HashMap<String, String> map_date = new HashMap<String, String>();
-        map_date.put("ItemTitle", "Date");
-        map_date.put("ItemText", strDate);
-        mylist.add(map_date);
-        HashMap<String, String> map_location = new HashMap<String, String>();
-        map_location.put("ItemTitle", "Location");
-        map_location.put("ItemText", strLoc);
-        mylist.add(map_location);
-        SimpleAdapter mSchedule = new SimpleAdapter(this,
-                mylist,
-                R.layout.listview,
-                new String[] {"ItemTitle", "ItemText"},
+        location.setText(strLoc);
+        time.setText(strDate);
 
-                new int[] {R.id.ItemTitle,R.id.ItemText});
-        list.setAdapter(mSchedule);
 
     }
 }

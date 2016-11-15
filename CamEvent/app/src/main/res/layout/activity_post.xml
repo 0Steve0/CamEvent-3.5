@@ -1,132 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/title"
-        android:id="@+id/textViewTitle" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/field_title"
-        android:singleLine="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/textViewBuilding"
-        android:id="@+id/textViewBuilding" />
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerBuilding" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/textViewStart"
-        android:id="@+id/textViewStart" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_search">
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <EditText
-            android:id="@+id/etxt_fromdate"
-            android:layout_width="129dp"
-            android:layout_height="87dp"
-            android:hint="Start Date" />
-
-        <EditText
-            android:id="@+id/etxt_fromtime"
-            android:layout_width="128dp"
-            android:layout_height="match_parent"
-            android:hint="Start Time" />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/textViewEnd"
-        android:id="@+id/textViewEnd" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="115dp"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <EditText
-            android:id="@+id/etxt_todate"
-            android:layout_width="138dp"
-            android:layout_height="90dp"
-            android:hint="End Date" />
-
-        <EditText
-            android:id="@+id/etxt_totime"
-            android:layout_width="match_parent"
-            android:layout_height="87dp"
-            android:hint="End Time" />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/textViewType"
-        android:id="@+id/textViewType" />
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerType" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/description"
-        android:id="@+id/textViewDescription" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editTextDescription"
-        android:singleLine="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/capacity"
-        android:id="@+id/textViewCapacity" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:id="@+id/editTextCapacity" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/post"
-        android:id="@+id/submit_post"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:onClick="post" />
+        android:layout_marginTop="70dp">
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/title"
+            android:drawableLeft="@drawable/word"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/location" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:id="@+id/spinnerBuilding"
+            android:gravity="center"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:paddingLeft="12dp"
+            android:popupBackground="@color/background"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/etxt_fromdate"
+            android:hint="@string/start"
+            android:drawableLeft="@drawable/time"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/description"
+            android:id="@+id/description"
+            android:drawableLeft="@drawable/word"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/post"
+            android:id="@+id/post"
+            android:onClick="post"
+            android:background="@drawable/button" />
+    </LinearLayout>
 
 </LinearLayout>
-

@@ -10,13 +10,21 @@
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="70dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/location" />
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/spinnerBuilding"
             style="@style/Widget.AppCompat.Spinner.Underlined"
-            android:background="@drawable/my_spinner" />
+            android:paddingLeft="12dp"
+            android:popupBackground="@color/background"/>
 
     </LinearLayout>
 
@@ -52,7 +60,7 @@
         android:layout_width="260dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="50dp">
 
         <Button
             android:id="@+id/search_button"
@@ -60,8 +68,7 @@
             android:layout_height="match_parent"
             android:onClick="search"
             android:hint="@string/search"
-            android:drawableLeft="@drawable/search"
-            android:color="@color/spinnerBackground"
+            android:background="@drawable/button"
             />
     </LinearLayout>
 
