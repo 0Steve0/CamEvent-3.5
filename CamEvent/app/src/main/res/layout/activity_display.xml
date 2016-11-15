@@ -1,38 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_display"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="ca.uwaterloo.camevent.DisplayActivity">
+    tools:context="ca.uwaterloo.camevent.DisplayActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=" I am title!"
-        android:textSize="30sp"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:id="@+id/title" />
-    <ListView android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/MyListView">
-    </ListView>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Link"
-        android:textSize="20sp"
-        android:gravity="left|right"
-        android:id="@+id/link" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="I am description"
-        android:textSize="20sp"
-        android:gravity="left|right"
-        android:id="@+id/des" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/background_material_red" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="130dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        android:background="@color/background">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alumni Big Ticket Day Men&#039;s Hockey"
+            android:id="@+id/title"
+            android:textSize="30dp"
+            android:textColor="#FFFFFF"
+            android:padding="6dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/time"
+            android:tint="@color/background"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-11-12"
+            android:id="@+id/time"
+            android:paddingLeft="16dp"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/location"
+            android:tint="@color/background"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Columbia Ice Field(CIF) Arena"
+            android:id="@+id/location"
+            android:paddingLeft="16dp"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/link"
+            android:tint="@color/background"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:text="https://uwaterloo.ca/alumni/alumni-advantage/benefits-perks/alumni-big-ticket"
+            android:id="@+id/link"
+            android:paddingLeft="16dp"
+            android:textSize="16dp" />
+    </LinearLayout>
 </LinearLayout>
-
-
