@@ -2,6 +2,13 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#4C96F8</color>
+    <color name="white">#FFFFFF</color>
+    <color name="appBlue">#4C96D7</color>
+    <color name="grey">#D5D8DC</color>
     <color name="background">#BBDEFB</color>
+    <color name="colorcomponentbg">#9AC4FC</color>
+    <color name="skypebule">#12A5F4</color>
+    <color name="black">#000000</color>
+    <color name="hint_text_color">#838383</color>
 </resources>

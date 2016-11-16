@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    android:shape="rectangle"
+    >
+    <gradient
+        android:startColor="@color/grey"
+        android:centerColor="@color/grey"
+        android:endColor="@color/grey"
+        />
+    <solid
+        android:color="@color/white"
+        />
+    <padding
+        android:top="8dp"
+        android:bottom="8dp"
+        android:left="12dp"
+        />
+    <!-- stroke is use for border of the rectangle -->
+    <stroke
+        android:color="@color/colorcomponentbg"
+        android:width="1.5dp"
+        />
+
+</shape>

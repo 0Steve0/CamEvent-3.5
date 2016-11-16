@@ -41,13 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignInActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".SearchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -98,9 +91,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchActivity__test"> </activity>
-        <activity android:name=".EventDBTest"></activity>
-        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".SearchActivity__test" />
+        <activity android:name=".EventDBTest" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".RetrievePasswordActivity"></activity>
     </application>
 
 </manifest>
