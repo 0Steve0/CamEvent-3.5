@@ -41,11 +41,11 @@
     <string name="title_activity_event_dbtest">EventDBTest</string>
     <string name="sign_up">Sign Up</string>
     <string name="hint_password">password</string>
-     <string name="hint_email">email</string>
-     <string name="sign_in">Sign In</string>
+    <string name="hint_email">email</string>
+    <string name="sign_in">Sign In</string>
     <string name="textViewBuilding">Building</string>
-      <string name="textViewType">Type</string>
-        <string name="textViewStart">Start</string>
-         <string name="textViewEnd">End</string>
+    <string name="textViewType">Type</string>
+    <string name="textViewStart">Start</string>
+    <string name="textViewEnd">End</string>
 
 </resources>

@@ -68,7 +68,7 @@ public class InitializeActivity extends AppCompatActivity implements JSONDownloa
                                 pb_downloadEvent.setProgress(progress);
                                 if(progress == pb_downloadEvent.getMax()) {
                                     //pb_downloadEvent.setVisibility(4);
-                                    Intent goTOSecondActivity = new Intent(InitializeActivity.this, SignInActivity.class);
+                                    Intent goTOSecondActivity = new Intent(InitializeActivity.this, HomeActivity.class);
                                     InitializeActivity.this.startActivity(goTOSecondActivity);
                                     finish();
                                 }
