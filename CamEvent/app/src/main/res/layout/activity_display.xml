@@ -5,22 +5,10 @@
     android:layout_height="match_parent"
     tools:context="ca.uwaterloo.camevent.DisplayActivity"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="200dp">
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/imageView"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/background_material_red" />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="130dp"
+        android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:padding="16dp"
         android:background="@color/background">
@@ -31,7 +19,8 @@
             android:id="@+id/title"
             android:textSize="30dp"
             android:textColor="#FFFFFF"
-            android:padding="6dp" />
+            android:padding="6dp"
+            android:layout_gravity="center" />
 
     </LinearLayout>
     <LinearLayout
@@ -54,7 +43,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="16dp">
         <ImageView
@@ -72,7 +61,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="16dp">
         <ImageView
