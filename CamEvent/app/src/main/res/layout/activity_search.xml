@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="@drawable/background_search">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="260dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -19,14 +19,16 @@
             android:src="@drawable/location" />
         <Spinner
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
             android:id="@+id/spinnerBuilding"
+            android:gravity="center"
             style="@style/Widget.AppCompat.Spinner.Underlined"
             android:paddingLeft="12dp"
             android:popupBackground="@color/background"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="260dp"
@@ -39,7 +41,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/start"
-            android:drawableLeft="@drawable/time"/>
+            android:drawableLeft="@drawable/time"
+            android:drawablePadding="6dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -54,7 +57,8 @@
             android:layout_height="match_parent"
             android:hint="@string/keyWord"
             android:singleLine="true"
-            android:drawableLeft="@drawable/word" />
+            android:drawableLeft="@drawable/word"
+            android:drawablePadding="6dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="260dp"
